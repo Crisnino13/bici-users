@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="frame">
+            <div class="contenedor">
+                <div class="menu">
+                    <h1>Ajusta tu bicicleta a tus medidas</h1>
+                    <p>Conoce la medida ideal para tu optimo desempeño</p>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div id="persona" class="modelo" style="background-image:url(img/man.png); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                    <form id="form1">
+                        <label class="entrepierna" for="text">Medida</label><br>
+                        <input id="numero" class="dato-entre" type="number" value="60">
+                    </form>
+                </div>
+                <div>
+                    <button class="send" type="button" onclick="myfunction()" form="form1">Calcular</button>
+                </div>
+                <div id="bicicleta" class="bici" style="background-image: url(img/bici.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
+                    <div class="resultado">
+                    <p class="dato">Distancia</p>
+                    <p id="result" class="dato-entre">52.8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myfunction() {
+                var x = parseInt(document.getElementById("numero").value);
+                var y = 0.88;
+                var z = x * y;
+                document.getElementById("result").innerHTML = z;
+                document.getElementById("persona").style.backgroundImage= "url('img/man-1.png')";
+                document.getElementById("bicicleta").style.backgroundImage= "url('img/bici-1.png')";
+            }
+
+                
+            
+        </script>
+    </body>
+</html>
