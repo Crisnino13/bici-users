@@ -126,6 +126,7 @@ button{
     border-color: none;
     outline: 0;
     border-style: none;
+    font-weight: 700;
 }
 
 @media (max-width: 800px) {
