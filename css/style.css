@@ -52,10 +52,16 @@ h1{
     
 }
 
-form{
+.group-entrepierna{
     position: absolute;
     top: 70%;
     left: 50%;
+}
+
+.group-altura{
+    position: absolute;
+    top: 50%;
+    left: 15%;
 }
 
 input{
@@ -98,6 +104,12 @@ input{
     position: absolute;
     top: 60%;
     left: 20%;
+}
+
+.resultado-altura{
+    position: absolute;
+    top: 30%;
+    left: 40%;
 }
 
 .resultado .dato{
