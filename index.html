@@ -19,8 +19,14 @@
             <div class="contenedor">
                 <div id="persona" class="modelo" style="background-image:url(img/man.png); background-size: contain; background-repeat: no-repeat; background-position: center;">
                     <form id="form1">
-                        <label class="entrepierna" for="text">Medida</label><br>
-                        <input id="numero" class="dato-entre" type="number" value="60">
+                        <div class="group-entrepierna">
+                            <label class="entrepierna" for="text">Medida</label><br>
+                            <input id="numero" class="dato-entre" type="number" value="60" onkeyup="myfunction()">
+                        </div>
+                        <div class="group-altura"> 
+                            <label class="entrepierna" for="altura">Altura</label><br>
+                            <input id="numero1" class="dato-entre" type="number" value="170" onkeyup="myfunction()">
+                        </div>
                     </form>
                 </div>
                 <div>
@@ -28,8 +34,12 @@
                 </div>
                 <div id="bicicleta" class="bici" style="background-image: url(img/bici.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
                     <div class="resultado">
-                    <p class="dato">Distancia</p>
-                    <p id="result" class="dato-result">52.8</p>
+                        <p class="dato">Distancia</p>
+                        <p id="result" class="dato-result">52.8</p>
+                    </div>
+                    <div class="resultado-altura">
+                        <p class="dato">Talla</p>
+                        <p id="result-high" class="dato-result">Talla S / 15 - 16in</p>
                     </div>
                 </div>
             </div>
@@ -43,6 +53,42 @@
                 document.getElementById("result").innerHTML = z;
                 document.getElementById("persona").style.backgroundImage= "url('img/man-1.png')";
                 document.getElementById("bicicleta").style.backgroundImage= "url('img/bici-1.png')";
+
+                var d = parseInt(document.getElementById("numero1").value);
+                var t = 100 * d / 200;
+
+                
+                
+                if (t < 85){
+                    document.getElementById("result-high").innerHTML = "Talla S / 15 - 16in"
+                }
+
+                             
+                else if (t < 89){
+                    document.getElementById("result-high").innerHTML = "Talla M / 17 - 18in"
+                }
+
+                             
+                else if (t < 92){
+                    document.getElementById("result-high").innerHTML = "Talla L / 18,5 - 19,5in"
+                }
+
+                else if (t < 95){
+                    document.getElementById("result-high").innerHTML = "Talla XL / 20"
+                }
+
+                else if (t < 100){
+                    document.getElementById("result-high").innerHTML = "Talla XXL / 21 - 22in"
+                }
+
+                             
+                else{
+                    document.getElementById("result-high").innerHTML = "Valor fuera del rango"
+                }
+                
+                
+                
+                
             }
 
                 
