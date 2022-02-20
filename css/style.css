@@ -9,12 +9,21 @@ body{
     color: aliceblue;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     
     
 }
 
 h1{
     color: #ffd900;
+    margin-bottom: 8px;
+}
+
+h2{
+    font-weight: 500;
+    margin-top: 0;
 }
 
 .menu {
@@ -25,9 +34,10 @@ h1{
 
 .frame{
     min-height: 100vh;
-    background-image: url(../img/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contenedor{
@@ -63,6 +73,24 @@ h1{
     top: 50%;
     left: 15%;
 }
+
+.info-adicional{
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    border-left-style:solid;
+    border-color: #ffd900;
+    padding-left: 16px;
+}
+
+.hidden{
+    float: left;
+    width: 30%;
+    padding-right: 8px;
+    
+}
+
+
 
 input{
     border-radius: 8px;
