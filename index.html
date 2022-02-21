@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
+        <title>Ajusta tu bicicleta a tus medidas</title>
+        <meta name="description" content="Conoce las medidias que debe tener tu bicicleta para evitar lesiones y malas posturas. Ingresa tus medidas en centimetros y conoce como ajustar tu bicicleta.">
+        <meta name="keywords" content="Bicicleta, Medidas, Ajustar, Biometrica, Ergonomia, Desempeño, Optimo, Comodidad, Talla">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/img/fav-icon.png">
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +25,11 @@
                     <form id="form1">
                         <div class="group-entrepierna">
                             <label class="entrepierna" for="text">Entrepierna</label><br>
-                            <input id="numero" class="dato-entre" type="number" value="60" onkeyup="myfunction()" onclick="textinfoentre()">
+                            <input id="numero" class="dato-entre" type="number" value="60" onkeyup="textinfoentre()" onclick="textinfoentre()">
                         </div>
                         <div class="group-altura"> 
                             <label class="entrepierna" for="altura">Altura</label><br>
-                            <input id="numero1" class="dato-entre" type="number" value="170" onkeyup="myfunction()">
+                            <input id="numero1" class="dato-entre" type="number" value="170" onkeyup="myfunction()" onclick="myfunction()">
                         </div>
                     </form>
                 </div>
@@ -54,15 +58,15 @@
 
         <script>
             function myfunction() {
-                var x = parseInt(document.getElementById("numero").value);
-                var y = 0.88;
-                var z = x * y;
-                document.getElementById("result").innerHTML = z;
+                
                 document.getElementById("persona").style.backgroundImage= "url('img/man-1.png')";
                 document.getElementById("bicicleta").style.backgroundImage= "url('img/bici-1.png')";
 
                 var d = parseInt(document.getElementById("numero1").value);
                 var t = 100 * d / 200;
+
+                var infoA = "Conocer tu altura es importante ya que con esto puedes saber el tamaño del marco que debes usar, recuerda usar las medidas en centimetros."
+                document.getElementById("info").innerHTML = infoA;
 
                 
                 
@@ -96,8 +100,14 @@
             }
 
                 function textinfoentre() {
-                    var infoP = "Toma la medida de tu entrepierna usando un libro, ubicalo entre sus muslos, y toma la medida desde el lomo del libro al piso. Importante debes estar descalzo."
-                    document.getElementById("info").innerHTML = infoP;
+                var x = parseInt(document.getElementById("numero").value);
+                var y = 0.88;
+                var z = x * y;
+                document.getElementById("result").innerHTML = z;
+                
+                var infoP = "Toma la medida de tu entrepierna usando un libro, ubicalo entre sus muslos, y toma la medida desde el lomo del libro al piso. Importante debes estar descalzo."
+                document.getElementById("info").innerHTML = infoP;
+                document.getElementById("persona").style.backgroundImage= "url('img/man-2.png')";
                     
 
                     
