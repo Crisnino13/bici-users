@@ -210,5 +210,9 @@ button{
         top: 60%;
         left: 10%;
     }
+
+    .info-adicional{
+        margin-top: 0;
+    }
     
 }
