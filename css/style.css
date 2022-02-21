@@ -171,6 +171,15 @@ button{
     font-weight: 700;
 }
 
+.link-button{
+    text-decoration: none;
+}
+
+.call-to-action .link-button a:visited{
+    color: black;
+}
+
+
 @media (max-width: 800px) {
 
     .frame{
