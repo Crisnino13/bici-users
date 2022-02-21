@@ -19,6 +19,8 @@ body{
 h1{
     color: #ffd900;
     margin-bottom: 8px;
+    margin-top: 0;
+    
 }
 
 h2{
@@ -29,10 +31,29 @@ h2{
 .menu {
     
     width: 100%;
-    text-align: center;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    flex-wrap: wrap;
 }
+
+
+.logo {
+    display: flex;
+}
+
+.logo img{
+    margin-right: 8px;
+}
+
+.logotipo {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 
 .frame{
     min-height: 100vh;
@@ -47,10 +68,16 @@ h2{
     flex-wrap: wrap;
 }
 
+.titulo{
+    flex: auto;
+    width: 100%;
+    text-align: center;
+}
+
 .modelo{
     flex: auto;
     width: 50%;
-    height: 80vh;
+    height: 75vh;
     position: relative;
     
     
@@ -173,6 +200,7 @@ button{
 
 .link-button{
     text-decoration: none;
+    color: black;
 }
 
 .call-to-action .link-button a:visited{
@@ -189,14 +217,18 @@ button{
         background-repeat: no-repeat;
     }
     
-    .menu{
-        position: absolute;
+    h1{
+        color: #ffd900;
+        margin-bottom: 8px;
+        margin-top: 16px;
+        
+        
     }
     
     .modelo{
         width: 100%;
         height: 80vh;
-        margin-top: 80px;
+        
     }
 
     .bici{
